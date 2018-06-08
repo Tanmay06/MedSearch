@@ -169,7 +169,7 @@ class DataRequestHandler(BaseHTTPRequestHandler):
 		print("Writing output ...")
 		self.wfile.write(case_data.encode())
 
-#This methos is used to initialize and start the server. 
+#This methods is used to initialize and start the server. 
 def run(server_class = HTTPServer, handler_class = DataRequestHandler, port = 80):
 	server_address = ('10.142.0.2', port)
 	httpd = server_class(server_address, handler_class)
