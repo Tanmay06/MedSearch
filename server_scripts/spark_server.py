@@ -7,7 +7,7 @@ import json
 #ImageSearchRequestHandler handles HTTP POST request and calls the spark job
 class ImageSearchRequestHandler(BaseHTTPRequestHandler):
 
-	#
+	#This method is used to set headers of the response generated for the request.
 	def _set_response(self):
 		self.send_response(200)
 		self.send_header('Content-type','application/json')
@@ -34,7 +34,7 @@ class ImageSearchRequestHandler(BaseHTTPRequestHandler):
 		self.wfile.write(data)
 		print("Response sent..")
 
-
+#This method is used to initialize and start the server
 def run(server_class = HTTPServer, handler_class = ImageSearchRequestHandler, port = 80):
 	server_address = ('10.160.0.4', port)
 	httpd = server_class(server_address, handler_class)
