@@ -1,0 +1,11 @@
+[Unit]
+Description=MedSearch Request Hosting Service
+Author=Tanmay Vakare
+
+[Service]
+WorkingDirectory=/home/tanmayvakare
+ExecStart=/usr/bin/python3 server_2.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
