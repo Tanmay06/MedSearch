@@ -1,10 +1,12 @@
+#systemd file for running mid_server as service and on startup
+
 [Unit]
 Description=MedSearch Request Hosting Service
 Author=Tanmay Vakare
 
 [Service]
 WorkingDirectory=/home/tanmayvakare
-ExecStart=/usr/bin/python3 mid_server_2.py
+ExecStart=/usr/bin/python3 mid_server.py
 Restart=always
 
 [Install]
