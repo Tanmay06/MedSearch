@@ -1,4 +1,4 @@
-"""This is a pyspark job to fetch all case images from mongoDB and stores the image features along with the object_id in a parqueet file on local storage. This makes processing faster as image feature dectection and extraction is a tedious process. The program uses SIFT to detect and extract features from images. This job can be scheduled to run at regular intervals(daily) to provide updated dataset for search jods. Refer README.md for more details."""
+"""This is a pyspark job to fetch all case images from mongoDB and stores the image features along with the object_id in a parqueet file on HDFS. This makes processing faster as image feature detection and extraction is a tedious process. The program uses SIFT to detect and extract features from images. This job can be scheduled to run at regular intervals(daily) to provide updated dataset for search jobs. Refer README.md for more details."""
 
 import cv2
 import numpy as np
