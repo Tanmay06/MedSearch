@@ -1,3 +1,2 @@
 # MedSearch
-A content based image retrieval system using spark and mongodb.
-<br><i>I am still working on this project. For any queries start a issue.<i/>
+It a content based image retrieval system which uses MongoDB to store data and Apache Spark to process the stored data and generate results.
