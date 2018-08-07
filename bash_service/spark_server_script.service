@@ -5,7 +5,7 @@ Author=Tanmay Vakare
 
 [Service]
 WorkingDirectory=/home/tanmayvakare
-ExecStart=/usr/bin/python3 server.py
+ExecStart=/usr/bin/python3 spark_server.py
 Restart=always
 
 [Install]
