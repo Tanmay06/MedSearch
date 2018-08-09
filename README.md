@@ -99,6 +99,6 @@ POST <url>?action=post_case
  }
 ```
 
-<p>This API was developed for Android Application but can be used for and application which can consume HTTP based API as it was tested using <a href="https://www.getpostman.com">Postman</a></p>
-<p>When the API recieves a image search request it forwards it to the Spark server which dowloads the image locally and starts spark-submit as subprocess with match.py and queried image as arguments. The Spark job extract features from queried image and loads features from image_data.parquet. Brute Force matching using Eucledian distance over KNN is used to match fetures of queried image with that of images in dataset. The object_ids of matched images is stored in a json and forwarded to API server.</p>
+<p>This API was developed for Android Application but can be used for applications which can consume HTTP based API as it was tested using <a href="https://www.getpostman.com">Postman</a></p>
+<p>When the API recieves a image search request it forwards it to the Spark server which downloads the image locally and starts spark-submit as subprocess with match.py and queried image as arguments. The Spark job extract features from queried image and loads features from image_data.parquet. Brute Force matching using Eucledian distance over KNN is used to match fetures of queried image with that of images in dataset. The object_ids of matched images is stored in a json and forwarded to API server.</p>
 <p>The API server, once json is received, fetches the matching images from database, compresses them to thumbnails and sends them to the requesting user along with their object_ids. The user can use the object_id to get full details of the image.</p>
