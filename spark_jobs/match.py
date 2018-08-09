@@ -38,7 +38,7 @@ sift = cv2.xfeatures2d.SIFT_create(200,5)
 kps,desc = sift.detectAndCompute(cv2.imread(sys_argv[1],0),None)
 
 #initialising images data RDD
-image_data = spark_s.read.parquet("<dir location>/image_data.parquet")
+image_data = spark_s.read.parquet("hdfs://<masternode name>/user/<username>/image_data.parquet")
 
 #matching features 
 matches = image_data.rdd.map(lambda x: match_features(desc,x)).filter(lambda x: x is not None).collect()
